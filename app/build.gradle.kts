@@ -55,4 +55,7 @@ dependencies {
 
     kapt(libs.hilt.android.compiler)
     implementation(libs.hilt.android)
+
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui)
 }
