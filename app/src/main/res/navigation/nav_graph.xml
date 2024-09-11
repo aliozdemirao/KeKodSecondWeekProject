@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/wordListFragment">
+
+    <fragment
+        android:id="@+id/wordListFragment"
+        android:name="com.aliozdemir.wordmaster.presentation.wordlist.WordListFragment"
+        android:label="fragment_word_list"
+        tools:layout="@layout/fragment_word_list" >
+        <action
+            android:id="@+id/action_wordListFragment_to_wordDetailFragment2"
+            app:destination="@id/wordDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wordDetailFragment"
+        android:name="com.aliozdemir.wordmaster.presentation.worddetail.WordDetailFragment"
+        android:label="fragment_word_detail"
+        tools:layout="@layout/fragment_word_detail" />
+    <fragment
+        android:id="@+id/learnedWordsFragment"
+        android:name="com.aliozdemir.wordmaster.presentation.learnedwords.LearnedWordsFragment"
+        android:label="fragment_learned_words"
+        tools:layout="@layout/fragment_learned_words" >
+        <action
+            android:id="@+id/action_learnedWordsFragment_to_learnedWordDetailFragment2"
+            app:destination="@id/learnedWordDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/learnedWordDetailFragment"
+        android:name="com.aliozdemir.wordmaster.presentation.learnedworddetail.LearnedWordDetailFragment"
+        android:label="fragment_learned_word_detail"
+        tools:layout="@layout/fragment_learned_word_detail" />
+</navigation>
