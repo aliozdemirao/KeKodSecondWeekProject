@@ -84,4 +84,6 @@ dependencies {
     implementation(libs.gson)
 
     implementation(libs.androidx.swiperefreshlayout)
+
+    implementation(libs.androidx.core.splashscreen)
 }
