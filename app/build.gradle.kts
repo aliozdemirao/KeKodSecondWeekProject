@@ -4,6 +4,11 @@ plugins {
 
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
+
+    id("kotlin-parcelize")
+    id("androidx.navigation.safeargs.kotlin")
+
+    id("androidx.room")
 }
 
 android {
@@ -39,6 +44,9 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    room {
+        schemaDirectory("$projectDir/schemas")
+    }
 }
 
 kapt {
@@ -67,4 +75,13 @@ dependencies {
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.savedstate)
+
+    kapt(libs.androidx.room.room.compiler)
+    implementation(libs.androidx.room.runtime)
+    annotationProcessor(libs.androidx.room.room.compiler)
+    implementation(libs.androidx.room.ktx)
+
+    implementation(libs.gson)
+
+    implementation(libs.androidx.swiperefreshlayout)
 }
